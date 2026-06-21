@@ -1,24 +1,22 @@
 # SJChat for Windows
 
-Public download/installer host for the **SJChat** Windows desktop client.
-The application source lives in a separate private repository; this repo only
-hosts the compiled ClickOnce installer so it can be downloaded over HTTPS.
+Public download host for the **SJChat** Windows desktop client. The app source lives in a
+separate private repository; releases are published here via **Velopack** to GitHub Releases.
 
 ## Install
 
-Once a release has been published, install from:
+**https://sjcouturier.github.io/SJChat-app/**  (Download & Install button)
 
-**https://sjcouturier.github.io/SJChat-app/publish.htm**
+Or grab the installer directly:
 
-That page links to `SJChat.application` (the ClickOnce deployment manifest)
-and `setup.exe`. The app is self-contained, so no separate .NET runtime
-install is required.
+**https://github.com/sjcouturier/SJChat-app/releases/latest/download/SJChat-win-Setup.exe**
 
-## How releases get here
+The app is self-contained (no .NET install needed) and updates itself automatically after install.
+Windows SmartScreen may warn on first run because the app is not code-signed; choose
+**More info > Run anyway**.
 
-The maintainer publishes the ClickOnce output from Visual Studio
-(SJChat.Wpf > Publish > ClickOnceProfile) and pushes the generated files
-into this repository's main branch, which GitHub Pages serves.
+## How releases are published
 
-> .nojekyll is present so GitHub Pages serves the ClickOnce files
-> (*.application, *.manifest, *.deploy, ...) without Jekyll processing.
+The maintainer runs `release.ps1 -Version x.y.z` from the private SJChat repo, which
+publishes a self-contained build, packages it with Velopack (`vpk`), and uploads the
+installer + update packages to this repo's GitHub Releases.

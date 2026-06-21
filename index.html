@@ -3,28 +3,40 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta http-equiv="refresh" content="0; url=Publish.html" />
-  <title>SJChat for Windows</title>
+  <title>Download SJChat for Windows</title>
   <style>
-    body { font-family: "Segoe UI", Tahoma, sans-serif; background:#1c5280; color:#fff;
-           display:flex; min-height:100vh; margin:0; align-items:center; justify-content:center; text-align:center; }
-    .card { background:#fff; color:#222; padding:40px 48px; border-radius:12px; box-shadow:0 8px 30px rgba(0,0,0,.3); max-width:420px; }
-    h1 { margin:0 0 8px; font-size:1.8em; }
-    p { margin:8px 0; line-height:1.5; }
-    a.btn { display:inline-block; margin-top:16px; padding:12px 28px; background:#1c5280; color:#fff;
-            text-decoration:none; border-radius:8px; font-weight:600; }
+    :root { --brand:#1c5280; }
+    * { box-sizing:border-box; }
+    body { font-family:"Segoe UI",Tahoma,sans-serif; background:linear-gradient(160deg,#1c5280,#0d2942);
+           color:#fff; margin:0; min-height:100vh; display:flex; align-items:center; justify-content:center; padding:24px; }
+    .card { background:#fff; color:#1a1a1a; border-radius:16px; box-shadow:0 12px 40px rgba(0,0,0,.35);
+            max-width:440px; width:100%; padding:40px; text-align:center; }
+    h1 { margin:0 0 6px; font-size:1.9em; color:var(--brand); }
+    .sub { color:#666; margin:0 0 28px; }
+    a.btn { display:inline-block; padding:15px 34px; background:var(--brand); color:#fff; text-decoration:none;
+            border-radius:10px; font-weight:600; font-size:1.05em; transition:background .15s; }
     a.btn:hover { background:#16415f; }
-    a.alt { color:#1c5280; }
+    .meta { margin-top:18px; font-size:.85em; color:#888; line-height:1.6; }
+    .meta a { color:var(--brand); }
+    .note { margin-top:22px; font-size:.8em; color:#999; line-height:1.5; border-top:1px solid #eee; padding-top:16px; }
   </style>
 </head>
 <body>
   <div class="card">
     <h1>SJChat for Windows</h1>
-    <p>Redirecting to the installer&hellip;</p>
-    <p>If nothing happens, choose an option below.</p>
-    <a class="btn" href="setup.exe">Install SJChat</a>
-    <p style="margin-top:20px"><a class="alt" href="Publish.html">Installer page</a> &middot;
-       <a class="alt" href="SJChat.application">Launch (if already installed)</a></p>
+    <p class="sub">A Messenger-style chat app.</p>
+    <a class="btn" href="https://github.com/sjcouturier/SJChat-app/releases/latest/download/SJChat-win-Setup.exe">
+      Download &amp; Install
+    </a>
+    <div class="meta">
+      Self-contained &middot; auto-updates &middot; no .NET install needed<br />
+      <a href="https://github.com/sjcouturier/SJChat-app/releases/latest">All releases</a>
+    </div>
+    <p class="note">
+      Windows may show a SmartScreen warning the first time (the app isn&rsquo;t code-signed yet).
+      Click <strong>More info &rarr; Run anyway</strong> to continue. After installing, the app
+      updates itself automatically.
+    </p>
   </div>
 </body>
 </html>
