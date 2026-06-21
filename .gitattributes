@@ -1,0 +1,4 @@
+# This repository hosts compiled ClickOnce publish output. The deployment and
+# application manifests contain SHA256 hashes of every file, so git MUST NOT
+# alter any bytes (no line-ending conversion, no smudge/clean filters).
+* -text
